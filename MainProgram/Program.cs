@@ -27,7 +27,12 @@ namespace MainProgram
             //string url = "https://seva22.blogspot.com/p/11.html";
             //string url = "https://seosly.com/newsletter/";
             Crawler simpleCrawler = null;
-            try { simpleCrawler = new Crawler(url, null, "127.0.0.1:8888"); } catch { }
+            try { simpleCrawler = new Crawler(url, null, null/*"127.0.0.1:8888"*/); } 
+            catch (Exception ex)
+            {
+                Console.ReadKey();
+                return;
+            }
 
             if (simpleCrawler != null)
                 simpleCrawler.Start(100);

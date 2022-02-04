@@ -185,6 +185,8 @@ namespace WebCrawler.SimpleCrawler
 
                     if (ex.Response != null)
                     {
+                        if (((HttpWebResponse)ex.Response).StatusCode == HttpStatusCode.Found)
+                            ;
                         if (((HttpWebResponse)ex.Response).StatusCode == HttpStatusCode.BadGateway)
                             ;//I do not know how best to handle such errors in this case
                     }
@@ -196,8 +198,8 @@ namespace WebCrawler.SimpleCrawler
                         {
                             if (!tokenSource.Token.IsCancellationRequested)
                             {
-                                listResultLinks.Clear();
-                                Console.WriteLine(ex.Message);
+                                //listResultLinks.Clear();
+                                //Console.WriteLine(ex.Message);
                                 tokenSource.Cancel();
                             }
                         }
