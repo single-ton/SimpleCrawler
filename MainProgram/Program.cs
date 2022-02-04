@@ -27,10 +27,10 @@ namespace MainProgram
             //string url = "https://seva22.blogspot.com/p/11.html";
             //string url = "https://seosly.com/newsletter/";
             Crawler simpleCrawler = null;
-            try { simpleCrawler = new Crawler(url, null, null/*"127.0.0.1:8887"*/); } catch { }
+            try { simpleCrawler = new Crawler(url, null, "127.0.0.1:8888"); } catch { }
 
             if (simpleCrawler != null)
-                simpleCrawler.Start(1);
+                simpleCrawler.Start(100);
             SitemapLoader sitemapLoader = new SitemapLoader(url);
             var sitemapLinks = await sitemapLoader.GetUrlsFromSitemaps();
             var crawlerLinks = simpleCrawler.ListResultLinks;
