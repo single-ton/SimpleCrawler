@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Functionality.Events
+namespace WebCrawler.Events
 {
     public class OnCompletedEventArgs
     {

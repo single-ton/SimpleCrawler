@@ -4,22 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Functionality
+namespace WebCrawler.DataStructures
 {
     public class UrlWithTiming
     {
-        public string Url { get; private set; }
+        public Uri Url { get; private set; }
         public long Timing { get; set; }
-        public UrlWithTiming(string url, long timing)
+        public UrlWithTiming(Uri url, long timing)
         {
             this.Timing = timing;
             this.Url = url;
         }
         public override string ToString()
         {
-            if (Timing == 0)
-                ;
-            return Url+" "+Timing;
+            return Url + " " + Timing;
         }
         public override bool Equals(object obj)
         {

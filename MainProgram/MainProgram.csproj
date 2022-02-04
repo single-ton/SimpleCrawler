@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Functionality\Functionality.csproj" />
+    <ProjectReference Include="..\WebCrawler\WebCrawler.csproj" />
   </ItemGroup>
 
 </Project>
